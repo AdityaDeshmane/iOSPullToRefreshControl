@@ -4,7 +4,7 @@ iOSPullToRefreshControl
 Pull to refresh control for UITableView and UICollectionView
 
 1. Normal state
-2. 
+
 ![      ](\1.png "")
 
 
