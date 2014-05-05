@@ -3,6 +3,21 @@ iOSPullToRefreshControl
 
 Pull to refresh control for UITableView and UICollectionView
 
+1. Normal state
+
+![      ](\1.PNG "")
+
+
+2. Dragged down
+
+![      ](\2.PNG "")
+
+3. Dragged till sufficient height to refresh
+
+![      ](\3.PNG "")
+
+4. Released / Refreshing state
+![      ](\4.PNG "")
 
 ##About 
 
