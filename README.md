@@ -23,9 +23,7 @@ How to use it?
 
 ><pre><code> 
 ADPullToRefreshView.h
-   
-ADPullToRefreshView.m
-</code></pre>
+ADPullToRefreshView.m</code></pre>
 
 >* How to use above classes 
    
@@ -60,7 +58,7 @@ ADPullToRefreshView.m
 }
 </code></pre>
                                                                           
-  >// You will need to add your methods here 1. pulledToRefresh - refreshes table/collectionview 2.finishedUpdating - finidhed updating table/collctionview
+  >// You will need to add your methods here 1. pulledToRefresh - refreshes table/collectionview 2.finishedUpdating - finished updating table/collctionview
   
   
 ><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
