@@ -21,9 +21,9 @@ How to use it?
 >
 * Add following class files to your project 
 
-   >ADPullToRefreshView.h
+   >>ADPullToRefreshView.h
    
-   >ADPullToRefreshView.m
+   >>ADPullToRefreshView.m
 
 >* How to use above classes 
    
