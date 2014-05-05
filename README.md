@@ -36,17 +36,17 @@ How to use it?
    ><pre><code> [_tableView addSubview:pullToRefreshView];</code></pre>
 
  > // Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows
-   ><pre><code> 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+   
+ ><pre><code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (pullToRefreshView)
     {
         [pullToRefreshView dragging];
     }
 }
+</code></pre>
 
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+ ><pre><code>- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     if (pullToRefreshView)
     {
@@ -56,7 +56,6 @@ How to use it?
         }
     }
 }
-
 </code></pre>
                                                                           
   >// You will need to add your methods here 1. pulledToRefresh - refreshes table/collectionview 2.finishedUpdating - finidhed updating table/collctionview
