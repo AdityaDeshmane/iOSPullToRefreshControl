@@ -21,9 +21,11 @@ How to use it?
 >
 * Add following class files to your project 
 
-   >>ADPullToRefreshView.h
+><pre><code> 
+ADPullToRefreshView.h
    
-   >>ADPullToRefreshView.m
+ADPullToRefreshView.m
+</code></pre>
 
 >* How to use above classes 
    
@@ -60,22 +62,21 @@ How to use it?
                                                                           
   >// You will need to add your methods here 1. pulledToRefresh - refreshes table/collectionview 2.finishedUpdating - finidhed updating table/collctionview
   
-  ><pre><code> 
-
--(void)finishedUpdating//this method should be called when finished with table data updating
+  
+><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
 {
     if (pullToRefreshView)
     {
         [pullToRefreshView finishedRefreshing];
     }
 }
+</code></pre>
 
 
--(void)pulledToRefresh//this method should be called when table data is to be refreshed..
+><pre><code>-(void)pulledToRefresh//this method should be called when table data is to be refreshed..
 {
     [self finishedUpdating];
 }
-
 </code></pre>
 
 ##Other Info : 
