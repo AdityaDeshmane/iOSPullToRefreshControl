@@ -20,7 +20,7 @@ How to use it?
 
 >
 
-* Download DEMO project and go thro files, for more info see using of control step by step..
+* Download DEMO project and go thro files, for more info see using of control below step by step..
 * Add following class files to your project 
 
 ><pre><code> 
