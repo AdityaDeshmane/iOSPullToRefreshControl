@@ -19,6 +19,8 @@ How to use it?
 -------------
 
 >
+
+* Download DEMO project and go thro files, for more info see using of control step by step..
 * Add following class files to your project 
 
 ><pre><code> 
@@ -36,7 +38,7 @@ ADPullToRefreshView.m</code></pre>
    
    ><pre><code> [_tableView addSubview:pullToRefreshView];</code></pre>
 
- > // Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows
+ > // Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
    
  ><pre><code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -51,7 +53,7 @@ ADPullToRefreshView.m</code></pre>
 {
     if (pullToRefreshView)
     {
-        if ([pullToRefreshView isDraggedBeyondRefreshHeight])
+        if ([pullToRefreshView isDraggedBeyondRefreshHeight])//when this case is true, means table/collection view was sufficiently dragged. This will show activity indicator with refreshing...text
         {
             [self pulledToRefresh];
         }
@@ -68,7 +70,7 @@ ADPullToRefreshView.m</code></pre>
 {
     if (pullToRefreshView)
     {
-        [pullToRefreshView finishedRefreshing];
+        [pullToRefreshView finishedRefreshing];//this will inform control that refreshing finished, hide control now
     }
 }
 </code></pre>
