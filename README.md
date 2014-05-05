@@ -62,7 +62,9 @@ ADPullToRefreshView.m</code></pre>
 </code></pre>
                                                                           
   >// You will need to add your methods here 
+  
   >1. pulledToRefresh - called to get new data for table/collectionview 
+  
   >2. finishedUpdating - when new data received refresh table/collection view content and call this method
   
   
