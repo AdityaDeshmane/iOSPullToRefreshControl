@@ -68,6 +68,12 @@ ADPullToRefreshView.m</code></pre>
   >2. finishedUpdating - when new data received refresh table/collection view content and call this method
   
   
+><pre><code>-(void)pulledToRefresh//this method should be called when table data is to be refreshed..
+{
+    [self finishedUpdating];
+}
+</code></pre>
+  
 ><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
 {
     if (pullToRefreshView)
@@ -78,11 +84,6 @@ ADPullToRefreshView.m</code></pre>
 </code></pre>
 
 
-><pre><code>-(void)pulledToRefresh//this method should be called when table data is to be refreshed..
-{
-    [self finishedUpdating];
-}
-</code></pre>
 
 ##Other Info : 
 
