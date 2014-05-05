@@ -28,8 +28,8 @@ ADPullToRefreshView.m</code></pre>
 >* How to use above classes 
    
    >>Sample code :
-   
-   ><pre><code>pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0]; //Create instance of pull to refresh view </code></pre>
+   >// Create instance of pull to refresh view
+   ><pre><code>pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  </code></pre>
 
   > // Add it as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
    
@@ -58,7 +58,7 @@ ADPullToRefreshView.m</code></pre>
 }
 </code></pre>
                                                                           
-  >// You will need to add your methods here 1. pulledToRefresh - refreshes table/collectionview 2.finishedUpdating - finished updating table/collctionview
+  >// You will need to add your methods here 1. pulledToRefresh - called to get new data for table/collectionview 2.finishedUpdating - when new data received refresh table/collection view content and call this method
   
   
 ><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
