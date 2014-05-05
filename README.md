@@ -28,6 +28,7 @@ ADPullToRefreshView.m</code></pre>
 >* How to use above classes 
    
    >>Sample code :
+   
    >// Create instance of pull to refresh view
    ><pre><code>pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  </code></pre>
 
@@ -58,7 +59,9 @@ ADPullToRefreshView.m</code></pre>
 }
 </code></pre>
                                                                           
-  >// You will need to add your methods here 1. pulledToRefresh - called to get new data for table/collectionview 2.finishedUpdating - when new data received refresh table/collection view content and call this method
+  >// You will need to add your methods here 
+  >1. pulledToRefresh - called to get new data for table/collectionview 
+  >2. finishedUpdating - when new data received refresh table/collection view content and call this method
   
   
 ><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
