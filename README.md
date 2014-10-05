@@ -5,22 +5,6 @@ Pull to refresh control for UITableView and UICollectionView
 
 ![      ](\iOSPullToRefresh.gif "")
 
- Normal state
-
-![      ](\1.png "")
-
-
- Dragged down
-
-![      ](\2.png "")
-
- Dragged till sufficient height to refresh
-
-![      ](\3.png "")
-
- Released / Refreshing state
-
-![      ](\4.png "")
 
 ##About 
 
