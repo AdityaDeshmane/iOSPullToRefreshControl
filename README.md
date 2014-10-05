@@ -3,6 +3,8 @@ iOSPullToRefreshControl
 
 Pull to refresh control for UITableView and UICollectionView
 
+![      ](\iOSPullToRefresh.gif "")
+
  Normal state
 
 ![      ](\1.png "")
