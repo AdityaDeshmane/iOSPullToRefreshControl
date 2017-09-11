@@ -25,32 +25,28 @@ How to use it?
 
 Download DEMO project and go thro files, for details see steps below,
 
-* Add following class files to your project 
+**STEP1:** Add following class files to your project 
 
 ```
 ADPullToRefreshView.h
 
 ADPullToRefreshView.m
 ```
-
-* How to use above classes 
-   
-Sample code :
-   
-STEP 1. Create instance of pull to refresh view
+      
+**STEP 2:** Create instance of pull to refresh view
   
 ``` 
 pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  
 
 ```
    
-STEP 2. Add above view as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
+**STEP 3:** Add above view as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
    
  ```
  [_tableView addSubview:pullToRefreshView];
  ```
 
-  STEP 3. Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
+**STEP 4:** Handle scrollview's following two delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
    
 ```
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
