@@ -46,7 +46,7 @@ pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:
  [_tableView addSubview:pullToRefreshView];
  ```
 
-**STEP 4:** Handle scrollview's following two delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
+**STEP 4:** Handle scrollview's following two delegate methods and call refresh control methods as follows (just copy paste them as it is)
    
 ```
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -65,7 +65,7 @@ pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:
     {
         if ([pullToRefreshView isDraggedBeyondRefreshHeight])//when this case is true, means table/collection view was sufficiently dragged. This will show activity indicator with refreshing...text
         {
-            [self pulledToRefresh];//get table data from Web Service etc.
+            //Get table data from Web Service etc. 
         }
     }
 }
