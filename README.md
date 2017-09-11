@@ -51,9 +51,9 @@ pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:
 ```
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (pullToRefreshView)
+    if (pullToRefreshView)//nil check
     {
-        [pullToRefreshView dragging];
+        [pullToRefreshView dragging];//dragging down is in progress
     }
 }
 ```
@@ -61,39 +61,25 @@ pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:
 ```
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (pullToRefreshView)
+    if (pullToRefreshView)//nil check
     {
         if ([pullToRefreshView isDraggedBeyondRefreshHeight])//when this case is true, means table/collection view was sufficiently dragged. This will show activity indicator with refreshing...text
         {
-            [self pulledToRefresh];
+            [self pulledToRefresh];//get table data from Web Service etc.
         }
     }
 }
 ```
                                                                           
-                                                                          
-  You will need to add your methods here 
-  
-  1. pulledToRefresh - called to get new data for table/collectionview 
-  
-  2. finishedUpdating - when new data received refresh table/collection view content and call this method
-  
+Once you are done with fetching table content data from Web Service etc. call method ```finishedRefreshing``` to hide pull to refresh control
+
   
 ```
--(void)pulledToRefresh//this method should be called when table data is to be refreshed..
-{
-    [self finishedUpdating];
-}
-```
-  
-```
--(void)finishedUpdating//this method should be called when finished with table data updating
-{
-    if (pullToRefreshView)
-    {
-        [pullToRefreshView finishedRefreshing];//this will inform control that refreshing finished, hide control now
-    }
-}
+
+    
+   [pullToRefreshView finishedRefreshing];//this will inform control that refreshing finished, hide control now
+   
+
 ```
 
 
