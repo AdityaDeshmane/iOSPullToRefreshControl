@@ -6,21 +6,24 @@ Pull to refresh control for UITableView and UICollectionView
 ![      ](/iOSPullToRefresh.gif "")
 
 
-##About 
+## About 
 
-><p>This is simple custom pull to refresh control similar to facebook app's pull to refresh control. 
-><p>Basic idea behind this is, both UITableView and UICollectionView extends UIScrollView. So just used scrollview's delegate methods to pass scrollview drag events to custom pull to refresh view.
+
+* Pull to refresh control similar to facebook app. 
+* Although this control is old and iOS provides its default refresh control for table, collection and scrollview. This control can be refered to create your custom pull to refresh as iOS does not provide customisation in default control.
+* Basic idea behind this is, both UITableView and UICollectionView extends UIScrollView. So just used scrollview's delegate methods to pass scrollview drag events to custom pull to refresh view.
+
 
 ## Where you can use it ?
 
->You can use it on UITableView and UICollectionView.
+You can use it on UITableView, UICollectionView and UIScrollView
 
 
 
 How to use it?
 -------------
 
->
+
 
 * Download DEMO project and go thro files, for more info see using of control below step by step..
 * Add following class files to your project 
