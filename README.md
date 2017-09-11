@@ -8,7 +8,7 @@ Pull to refresh control for UITableView and UICollectionView
 
 ## About 
 
-
+* Works from iOS 7 to 11
 * Pull to refresh control similar to facebook app. 
 * Although this control is old and iOS provides its default refresh control for table, collection and scrollview. This control can be refered to create your custom pull to refresh as iOS does not provide customisation in default control.
 * Basic idea behind this is, both UITableView and UICollectionView extends UIScrollView. So just used scrollview's delegate methods to pass scrollview drag events to custom pull to refresh view.
@@ -23,21 +23,23 @@ You can use it on UITableView, UICollectionView and UIScrollView
 How to use it?
 -------------
 
+Download DEMO project and go thro files, for details see steps below,
 
-
-* Download DEMO project and go thro files, for more info see using of control below step by step..
 * Add following class files to your project 
 
-><pre><code> 
+<code> 
 ADPullToRefreshView.h
-ADPullToRefreshView.m</code></pre>
+ADPullToRefreshView.m
+</code>
 
->* How to use above classes 
+* How to use above classes 
    
-   >>Sample code :
+   Sample code :
    
-   >// Create instance of pull to refresh view
-   ><pre><code>pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  </code></pre>
+   //1. Create instance of pull to refresh view
+   <code>
+   pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  
+   </code>
 
   > // Add it as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
    
