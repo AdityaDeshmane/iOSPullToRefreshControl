@@ -39,24 +39,31 @@ Sample code :
    
 STEP 1. Create instance of pull to refresh view
   
-```   pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  ```
+``` 
+pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  
+
+```
    
 STEP 2. Add above view as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
    
- ```[_tableView addSubview:pullToRefreshView];```
+ ```
+ [_tableView addSubview:pullToRefreshView];
+ ```
 
-  //STEP 3. Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
+  STEP 3. Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
    
- ><pre><code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+```
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     if (pullToRefreshView)
     {
         [pullToRefreshView dragging];
     }
 }
-</code></pre>
+```
 
- ><pre><code>- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+```
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     if (pullToRefreshView)
     {
@@ -66,44 +73,34 @@ STEP 2. Add above view as subview to table view/collection view (no need to worr
         }
     }
 }
-</code></pre>
+```
                                                                           
-  >// You will need to add your methods here 
+                                                                          
+  You will need to add your methods here 
   
-  >1. pulledToRefresh - called to get new data for table/collectionview 
+  1. pulledToRefresh - called to get new data for table/collectionview 
   
-  >2. finishedUpdating - when new data received refresh table/collection view content and call this method
+  2. finishedUpdating - when new data received refresh table/collection view content and call this method
   
   
-><pre><code>-(void)pulledToRefresh//this method should be called when table data is to be refreshed..
+```
+-(void)pulledToRefresh//this method should be called when table data is to be refreshed..
 {
     [self finishedUpdating];
 }
-</code></pre>
+```
   
-><pre><code> -(void)finishedUpdating//this method should be called when finished with table data updating
+```
+-(void)finishedUpdating//this method should be called when finished with table data updating
 {
     if (pullToRefreshView)
     {
         [pullToRefreshView finishedRefreshing];//this will inform control that refreshing finished, hide control now
     }
 }
-</code></pre>
+```
 
 
-
-##Other Info : 
-
-
-><li>Works for : iOS 6 and above</li>
-
-><li>Uses ARC : Yes </li>
-
-><li>Xcode : 4 and above (Developed using 5.0.1)</li>
-
-><li>Base SDK : 7.0 (Setting lower will also work)</li>
-
-><li>Requires storybord/xib ? : Custom control can be used for both</li>
 
 
 
