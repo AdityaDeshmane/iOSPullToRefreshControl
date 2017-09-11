@@ -29,6 +29,7 @@ Download DEMO project and go thro files, for details see steps below,
 
 <code> 
 ADPullToRefreshView.h
+
 ADPullToRefreshView.m
 </code>
 
@@ -41,11 +42,13 @@ ADPullToRefreshView.m
    pullToRefreshView =  [[ADPullToRefreshView alloc] initWithTableOrCollectionView:_tableView andCustomWidth:0];  
    </code>
 
-  > // Add it as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
+  //2. Add above view as subview to table view/collection view (no need to worry about what frame to set etc. just add as subview, control does these sort of handling on its own)
    
-   ><pre><code> [_tableView addSubview:pullToRefreshView];</code></pre>
+   <code>
+   [_tableView addSubview:pullToRefreshView];
+   </code>
 
- > // Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
+  //3. Handle scrollview's these 2 delegate methods and call to respective methods of pull to refresh control as follows (just copy paste them as it is)
    
  ><pre><code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
